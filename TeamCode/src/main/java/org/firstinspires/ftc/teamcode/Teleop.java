@@ -42,8 +42,12 @@ import com.qualcomm.robotcore.util.Range;
 public class Teleop extends LinearOpMode {
 
     //Method that gets called when you hit "init"
+
+    public Hardware robot;
     @Override
     public void runOpMode() {
+robot= new Hardware(hardwareMap);
+
 
         // run until the end of the match (driver presses STOP)
         while (opModeIsActive()) {
